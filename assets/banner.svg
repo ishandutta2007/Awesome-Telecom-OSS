@@ -1,1 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="100%" height="100%" fill="#1e1e2e"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#cba6f7" font-family="Arial" font-size="36" font-weight="bold">Awesome Telecom OSS</text><circle cx="10%" cy="50%" r="20" fill="#f38ba8"><animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite"/></circle><circle cx="90%" cy="50%" r="20" fill="#89b4fa"><animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite"/></circle></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Dark Tech Gradient Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Vibrant Animated Gradients -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#38bdf8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#c084fc;#38bdf8;#818cf8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#38bdf8;#818cf8;#c084fc" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Network Grid Background Pattern -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Waveform Overlay -->
+  <path d="M 0,260 Q 300,200 600,250 T 1200,230 L 1200,360 L 0,360 Z" fill="url(#glowGrad)">
+    <animate attributeName="d" 
+      values="M 0,260 Q 300,200 600,250 T 1200,230 L 1200,360 L 0,360 Z;
+              M 0,240 Q 300,280 600,220 T 1200,250 L 1200,360 L 0,360 Z;
+              M 0,260 Q 300,200 600,250 T 1200,230 L 1200,360 L 0,360 Z"
+      dur="10s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Animated Floating Circuit & Telecom Nodes -->
+  <!-- Node 1 Left -->
+  <g transform="translate(140, 110)">
+    <circle cx="0" cy="0" r="28" fill="#0f172a" stroke="#38bdf8" stroke-width="2" filter="url(#subtleGlow)">
+      <animate attributeName="r" values="26;30;26" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="10" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <!-- Orbiting particle -->
+    <circle cx="28" cy="0" r="4" fill="#a855f7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Node 2 Right -->
+  <g transform="translate(1060, 110)">
+    <circle cx="0" cy="0" r="28" fill="#0f172a" stroke="#c084fc" stroke-width="2" filter="url(#subtleGlow)">
+      <animate attributeName="r" values="26;30;26" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="10" fill="#c084fc">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Orbiting particle -->
+    <circle cx="28" cy="0" r="4" fill="#38bdf8">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Signal Transmission Pulses Across Header -->
+  <path d="M 140,110 L 400,110 L 600,60 L 800,110 L 1060,110" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="6,6" />
+  <path d="M 140,110 L 400,110 L 600,60 L 800,110 L 1060,110" fill="none" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="80,400" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" values="480;0" dur="3s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Central Satellite Dish / Core Icon -->
+  <g transform="translate(600, 75)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="20" fill="#1e1b4b" stroke="url(#accentGrad)" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#67e8f9">
+      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <!-- Expanding Signal Ring -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="r" values="20;50" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Typography -->
+  <!-- Top Category Tag -->
+  <text x="600" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="3">
+    📡 TELECOM OPERATIONS SUPPORT SYSTEMS
+  </text>
+
+  <!-- Main Title -->
+  <text x="600" y="215" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="url(#accentGrad)" filter="url(#subtleGlow)">
+    Awesome Telecom OSS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="260" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#94a3b8">
+    Inventory • Service Fulfillment • Multi-Domain Orchestration • Autonomous Networks • Closed-Loop AIOps
+  </text>
+
+  <!-- Bottom Badges in SVG -->
+  <g transform="translate(600, 305)">
+    <!-- Badge 1: 5G Ready -->
+    <rect x="-195" y="-12" width="115" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="-182" cy="0" r="4" fill="#22c55e" />
+    <text x="-132" y="4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">5G Core / RAN</text>
+
+    <!-- Badge 2: TM Forum Open API -->
+    <rect x="-65" y="-12" width="130" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="-52" cy="0" r="4" fill="#38bdf8" />
+    <text x="5" y="4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">TM Forum Open APIs</text>
+
+    <!-- Badge 3: Cloud Native -->
+    <rect x="80" y="-12" width="115" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="93" cy="0" r="4" fill="#a855f7" />
+    <text x="142" y="4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Cloud-Native OSS</text>
+  </g>
+</svg>
