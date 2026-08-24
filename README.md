@@ -1,7 +1,5 @@
 # Awesome-Telecom-OSS
 
-Markdown
-Copy
 # Top Telecom OSS Platforms Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
 *Focused on Operations Support Systems — Inventory, Order Management, Fulfillment, Assurance, Orchestration, Service & Resource Management*
